@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Flávia Balbo | Contabilidade e Consultoria</title>
 <meta name="description" content="Serviços contábeis e consultoria financeira para empresas e profissionais. Contabilidade empresarial, planejamento tributário e abertura de empresas.">
+<link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
@@ -41,7 +42,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15}
 header{position:sticky;top:0;z-index:20;background:rgba(18,28,44,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--borda)}
 .topo{display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:1.3rem}
-.monograma{font-family:var(--serif);font-style:italic;color:var(--destaque);border:1px solid var(--destaque);width:30px;height:30px;display:grid;place-items:center;font-size:.85rem;border-radius:50%}
+.marca{height:34px;width:auto;flex:none}
+.credencial .marca{height:40px}
 nav{display:flex;align-items:center;gap:28px;font-size:.85rem;color:var(--suave)}
 nav a:hover{color:var(--texto)}
 nav .btn{padding:9px 18px;font-size:.82rem;color:var(--destaque-escuro)}
@@ -135,7 +137,7 @@ footer.rodape{border-top:1px solid var(--borda);padding:40px 0;background:#08111
 
 <header>
   <div class="wrap topo">
-    <a class="logo" href="#inicio" aria-label="Flávia Balbo, início"><span class="monograma">fb</span>Flávia Balbo</a>
+    <a class="logo" href="#inicio" aria-label="Flávia Balbo, início"><img class="marca" src="img/logo.png" alt="" width="46" height="30">Flávia Balbo</a>
     <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
     <nav id="menu">
       <a href="#servicos">Serviços</a>
@@ -166,7 +168,7 @@ footer.rodape{border-top:1px solid var(--borda);padding:40px 0;background:#08111
     </div>
     <div class="hero-foto" role="img" aria-label="Flávia Balbo trabalhando">
       <div class="credencial">
-        <span class="monograma">fb</span>
+        <img class="marca" src="img/logo.png" alt="" width="46" height="30">
         <div><b>Flávia Balbo</b><small>Contadora · Consultora financeira · CRC/SP 123.456/O-7</small></div>
       </div>
     </div>
@@ -233,7 +235,7 @@ footer.rodape{border-top:1px solid var(--borda);padding:40px 0;background:#08111
 <footer class="rodape">
   <div class="wrap">
     <div class="rodape-topo">
-      <div class="logo"><span class="monograma">fb</span><div>Flávia Balbo<br><small style="font-family:var(--sans);font-size:.75rem">Contabilidade &amp; Consultoria</small></div></div>
+      <div class="logo"><img class="marca" src="img/logo.png" alt="" width="46" height="30"><div>Flávia Balbo<br><small style="font-family:var(--sans);font-size:.75rem">Contabilidade &amp; Consultoria</small></div></div>
       <!-- LINKS: troque os # pelos endereços reais -->
       <ul>
         <li><a href="#servicos">Serviços</a></li>
