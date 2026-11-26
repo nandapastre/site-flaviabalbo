@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Flávia Balbo | Contabilidade e Consultoria</title>
 <meta name="description" content="Serviços contábeis e consultoria financeira para empresas e profissionais. Contabilidade empresarial, planejamento tributário e abertura de empresas.">
+<!-- Prévia no WhatsApp/redes: troque og:image pelo endereço completo do site quando publicar -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Flávia Balbo | Contabilidade e Consultoria">
+<meta property="og:description" content="Contabilidade empresarial, planejamento tributário e abertura de empresas. Agende uma conversa gratuita.">
+<meta property="og:image" content="img/flavia.jpg">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,7 +75,7 @@ nav .btn:hover{color:var(--destaque-escuro)}
 .numero{border-top:1px solid var(--borda-forte);padding-top:14px}
 .numero strong{display:block;font-family:var(--serif);font-weight:500;font-size:1.6rem;line-height:1.2;color:var(--destaque);font-variant-numeric:lining-nums}
 .numero span{display:block;font-size:.78rem;line-height:1.4;color:var(--suave)}
-.hero-foto{position:relative;background:#2a3445 url("img/hero.jpg") center/cover no-repeat;min-height:360px}
+.hero-foto{position:relative;background:#2a3445 url("img/flavia.jpg") 60% 18%/cover no-repeat;min-height:360px}
 .hero-foto::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--fundo) 0%,rgba(11,21,35,.35) 35%,rgba(11,21,35,.1) 100%)}
 .credencial{position:absolute;left:24px;right:24px;bottom:24px;display:flex;gap:14px;align-items:center;padding:14px 18px;background:rgba(15,27,45,.78);border:1px solid var(--borda);backdrop-filter:blur(6px)}
 .credencial b{font-family:var(--serif);font-weight:500;display:block}
@@ -89,7 +95,7 @@ section{padding:96px 0}
 
 .sobre{background:var(--fundo-2)}
 .sobre-grade{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.sobre-foto{aspect-ratio:4/5;background:#3a3f4c url("img/sobre.jpg") center/cover no-repeat}
+.sobre-foto{aspect-ratio:4/5;background:#3a3f4c url("img/flavia.jpg") center 30%/cover no-repeat}
 .sobre h2{font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:22px}
 .sobre p{color:var(--suave);max-width:46ch}
 
@@ -104,6 +110,9 @@ blockquote footer small{display:block;color:var(--suave);font-size:.75rem}
 .cta{border-top:1px solid var(--borda);text-align:center;padding:110px 0}
 .cta h2{font-size:clamp(1.8rem,4vw,2.8rem);max-width:18ch;margin:0 auto 18px}
 .cta p{color:var(--suave);max-width:40ch;margin:0 auto 32px}
+.contatos{display:flex;align-items:center;justify-content:center;max-width:none!important;margin-bottom:0!important;flex-wrap:wrap;column-gap:28px;margin-top:20px;font-size:.88rem;color:var(--suave)}
+.contatos a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-decoration-color:var(--borda-forte);text-underline-offset:5px;transition:color .2s,text-decoration-color .2s}
+.contatos a:hover{color:var(--texto);text-decoration-color:var(--destaque)}
 
 footer.rodape{border-top:1px solid var(--borda);padding:40px 0;background:#08111d}
 .rodape-topo{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid var(--borda);margin-bottom:22px}
@@ -124,11 +133,12 @@ footer.rodape{border-top:1px solid var(--borda);padding:40px 0;background:#08111
   nav a{padding:14px 0;border-bottom:1px solid var(--borda)}
   nav .btn{margin-top:14px;justify-content:center;border-bottom:1px solid var(--destaque)}
   .hero{grid-template-columns:1fr}
-  .hero-foto{order:-1;min-height:300px}
+  .hero-foto{order:-1;min-height:380px;background-position:center 15%}
   .hero-foto::before{background:linear-gradient(0deg,var(--fundo) 0%,rgba(11,21,35,.2) 60%)}
   .credencial{display:none}
   .hero-texto{padding:20px 20px 56px;margin-top:-40px;position:relative}
   .botoes .btn{flex:1 1 100%}
+  .contatos{flex-direction:column;row-gap:0}
   .numeros{gap:16px}
   .numero strong{font-size:1.35rem}
   section{padding:64px 0}
@@ -174,10 +184,10 @@ footer.rodape{border-top:1px solid var(--borda);padding:40px 0;background:#08111
         <div class="numero"><strong>100%</strong><span>Dedicação ao cliente</span></div>
       </div>
     </div>
-    <div class="hero-foto" role="img" aria-label="Flávia Balbo trabalhando">
+    <div class="hero-foto" role="img" aria-label="Retrato de Flávia Balbo em seu escritório">
       <div class="credencial">
         <img class="marca" src="img/logo.png" alt="" width="700" height="453">
-        <div><b>Flávia Balbo</b><small>Contadora · Consultora financeira · CRC/SP 123.456/O-7</small></div>
+        <div><b>Flávia Balbo</b><small>Contadora · Consultora financeira · CRC/MG 098765/O-2</small></div>
       </div>
     </div>
   </div>
@@ -201,7 +211,7 @@ footer.rodape{border-top:1px solid var(--borda);padding:40px 0;background:#08111
   <!-- ===== SOBRE ===== -->
   <section id="sobre" class="sobre">
     <div class="wrap sobre-grade">
-      <div class="sobre-foto" role="img" aria-label="Flávia Balbo no escritório"></div>
+      <div class="sobre-foto" role="img" aria-label="Flávia Balbo, contadora"></div>
       <div>
         <h2>Números que contam histórias de crescimento.</h2>
         <p>Com mais de 12 anos de experiência em contabilidade empresarial e consultoria tributária, Flávia Balbo construiu sua prática sobre um princípio simples: cada cliente merece atenção personalizada e orientação verdadeiramente estratégica.</p>
@@ -232,6 +242,8 @@ footer.rodape{border-top:1px solid var(--borda);padding:40px 0;background:#08111
       <h2>Pronta para cuidar da sua vida financeira?</h2>
       <p>Agende uma conversa sem compromisso e descubra como podemos transformar a gestão financeira do seu negócio.</p>
       <a class="btn zap-link" href="#">Agendar conversa gratuita <span class="seta" aria-hidden="true">&rarr;</span></a>
+      <!-- CONTATOS: troque e-mail e telefone pelos reais -->
+      <p class="contatos">Prefere outro canal? <a href="mailto:contato@flaviabalbo.com.br">contato@flaviabalbo.com.br</a> <a href="tel:+553432101234">(34) 3210-1234</a></p>
     </div>
   </section>
 </main>
@@ -240,17 +252,16 @@ footer.rodape{border-top:1px solid var(--borda);padding:40px 0;background:#08111
   <div class="wrap">
     <div class="rodape-topo">
       <div class="logo"><img class="marca" src="img/logo.png" alt="" width="700" height="453"><div>Flávia Balbo<small>Contabilidade &amp; Consultoria</small></div></div>
-      <!-- LINKS: troque os # pelos endereços reais -->
+      <!-- LINKS: troque pelos endereços reais (Privacidade: adicionar quando houver a página) -->
       <ul>
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#contato">Contato</a></li>
-        <li><a href="#">Privacidade</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/flaviabalbo" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/flaviabalbo.contabil" target="_blank" rel="noopener">Instagram</a></li>
       </ul>
     </div>
-    <small>&copy; 2026 Flávia Balbo · CRC/SP 123.456/O-7 · Todos os direitos reservados</small>
+    <small>&copy; 2026 Flávia Balbo · CRC/MG 098765/O-2 · Todos os direitos reservados</small>
   </div>
 </footer>
 
@@ -261,7 +272,7 @@ footer.rodape{border-top:1px solid var(--borda);padding:40px 0;background:#08111
 
 <script>
 /* ===== CONTATO: troque o número (com 55 + DDD) e a mensagem ===== */
-var WHATSAPP = "5534999999999";
+var WHATSAPP = "5534991234567";
 var MENSAGEM = "Olá, Flávia! Vim pelo seu site e gostaria de agendar uma conversa.";
 document.querySelectorAll(".zap-link").forEach(function(a){
   a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg || MENSAGEM);
