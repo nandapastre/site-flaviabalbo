@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<script>document.documentElement.classList.add("js")</script>
+<script>(function(d){d.classList.add("js");function ok(){d.classList.add("pronto")}setTimeout(ok,900);document.addEventListener("DOMContentLoaded",function(){if(document.fonts&&document.fonts.ready){document.fonts.ready.then(ok)}else{ok()}})})(document.documentElement)</script>
 <style>
 :root{--marinho:#0D1B2A;--grafite:#2C3440;--nude:#D6C2B6;--nude-claro:#EBE0D7;--offwhite:#F7F3EF;--rose:#CDA18A;--rose-escuro:#B7826B;--metal:linear-gradient(120deg,#E6C2AE 0%,#CDA18A 45%,#B7826B 100%);--suave:#5b6574;--serif:'Playfair Display',Georgia,serif;--sans:'Montserrat',system-ui,sans-serif;--sai:cubic-bezier(.16,1,.3,1)}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -179,14 +179,16 @@ section{position:relative}
 .hero h1 em::after{content:"";position:absolute;left:0;right:.1em;bottom:.02em;height:2px;background:var(--metal);transform-origin:left}
 .js .hero .eyebrow{animation:surge .7s var(--sai) .1s both}
 .js .hero h1{animation:mascara .9s var(--sai) .2s both}
-.js .hero h1 em::after{animation:traco .8s var(--sai) 1.05s both}
+.js .hero h1 em::after{animation:traco .7s var(--sai) .8s both}
 .js .hero .sub{animation:surge .7s var(--sai) .55s both}
 .js .hero .acoes{animation:surge .7s var(--sai) .7s both}
 .js .pose::before{animation:sobe 1s var(--sai) .1s backwards}
-.js .pose .foto{animation:abre 1.1s var(--sai) .25s backwards,sombra .7s ease 1.35s backwards}
-.js .pose::after{animation:esmaece .9s ease .9s backwards}
-.js .cartao{animation:pousa .8s var(--sai) 1.15s backwards}
-.js .zap{animation:surge .6s var(--sai) 1.5s backwards}
+.js .pose .foto{animation:abre .9s var(--sai) .2s backwards,sombra .45s ease 1.1s backwards}
+.js .pose::after{animation:esmaece .6s ease .7s backwards}
+.js .cartao{animation:pousa .75s var(--sai) .8s backwards}
+.js .zap{animation:surge .5s var(--sai) 1.1s backwards}
+/* espera as fontes para o título não trocar de forma no meio da entrada */
+.js:not(.pronto) :is(.hero .eyebrow,.hero h1,.hero .sub,.hero .acoes,.pose .foto,.cartao,.zap),.js:not(.pronto) .pose::before,.js:not(.pronto) .pose::after,.js:not(.pronto) .hero h1 em::after{animation-play-state:paused}
 @keyframes surge{from{opacity:0;transform:translateY(14px)}}
 @keyframes esmaece{from{opacity:0}}
 @keyframes mascara{from{opacity:0;clip-path:inset(-20% -5% 100% -5%);transform:translateY(.35em)}to{opacity:1;clip-path:inset(-20% -5% -20% -5%);transform:none}}
@@ -211,8 +213,11 @@ section{position:relative}
 .js .familiar ul.visto li{opacity:1;transform:none}
 
 /* Serviços e dúvidas: o conteúdo aberto chega suavemente */
-.sv{transition:background-color .35s ease,color .35s ease}
-.sv .ico{transition:stroke .35s ease}
+:root{interpolate-size:allow-keywords}
+.sv{transition:background-color .2s var(--sai),color .2s var(--sai)}
+.sv .ico{transition:stroke .2s var(--sai)}
+.sv::details-content,.faq details::details-content{block-size:0;overflow:hidden;transition:block-size .4s var(--sai),content-visibility .4s allow-discrete}
+.sv[open]::details-content,.faq details[open]::details-content{block-size:auto}
 .sv[open]>p,.sv[open]>.mais,.faq details[open]>p{animation:surge .45s var(--sai) both}
 .sv[open]>.mais{animation-delay:.06s}
 
@@ -235,6 +240,7 @@ section{position:relative}
   .js .familiar li{transform:none;transition:opacity .5s ease}
   .js .passos li{background-size:100% 1px;transition:none}
   .sv[open]>p,.sv[open]>.mais,.faq details[open]>p,.depo-item.ativo{animation:esmaece .3s ease both}
+  .sv::details-content,.faq details::details-content{transition:none}
   .pilula::after,.topo nav a::after{display:none}
 }
 </style>
