@@ -127,6 +127,20 @@ section{position:relative}
 .contato label{display:grid;gap:6px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#c4cddb}
 .contato input,.contato textarea{font:inherit;font-size:.95rem;letter-spacing:0;text-transform:none;background:rgba(247,243,239,.08);border:1px solid rgba(205,161,138,.4);border-radius:12px;padding:13px 15px;color:var(--offwhite)}
 .contato textarea{min-height:100px;resize:vertical}
+/* ===== CELULAR: foto ao lado do título, como no desktop ===== */
+@media(max-width:859px){
+.hero .wrap{grid-template-columns:1fr 40%;grid-template-areas:"eyebrow eyebrow" "titulo pose" "sub sub" "acoes acoes";column-gap:14px;row-gap:0;align-items:center}
+.hero .wrap>div:first-child{display:contents}
+.hero .eyebrow{grid-area:eyebrow}
+.hero h1{grid-area:titulo;font-size:clamp(1.45rem,7.2vw,2.6rem);margin:0}
+.hero .sub{grid-area:sub;margin-top:24px}
+.hero .acoes{grid-area:acoes}
+.pose{grid-area:pose;width:100%;padding:0 0 12px 12px;align-self:center}
+.pose::before{right:12px;top:32px}
+.pose::after{left:6px;right:6px;top:26px;bottom:-6px}
+.pose .foto{margin-left:12px;box-shadow:0 12px 26px rgba(13,27,42,.28)}
+.cartao{display:none}
+}
 @media(min-width:860px){
 .topo nav{display:flex}.topo .pilula{display:inline-block}
 .hero{padding:70px 0 100px}.hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:60px}
@@ -251,7 +265,7 @@ section{position:relative}
 <body>
 <header class="topo"><div class="wrap"><a class="marca" href="#inicio" aria-label="Flávia Balbo Contabilidade"><img src="img/logo.png" alt="" width="68" height="44"><span class="nome"><b>Flávia Balbo</b><i>Contabilidade</i></span></a><nav aria-label="Principal"><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#depoimentos">Depoimentos</a><a href="#faq">Dúvidas</a></nav><a class="pilula zap-link" href="#">Entrar em contato</a></div></header>
 <main>
-<section class="hero" id="inicio"><svg class="linhas" style="left:-80px;top:0;width:620px;height:100%" viewBox="0 0 600 500" preserveAspectRatio="none" aria-hidden="true"><path d="M-20 420C120 330 220 470 380 360S560 200 640 250"/><path d="M-20 460C130 380 240 500 400 410S570 250 640 300"/></svg><div class="wrap"><div><p class="eyebrow">Contabilidade · Perícias trabalhistas · Perícias contábeis</p><h1>Contabilidade e perícias com <em>precisão técnica</em> e explicações claras.</h1><p class="sub">Sou Flávia Balbo, contadora e perita contábil. Atendo empresas e profissionais na contabilidade e elaboro laudos periciais contábeis e trabalhistas.</p><div class="acoes"><a class="pilula zap-link" href="#">Entrar em contato</a><a class="pilula contorno" href="#servicos">Ver serviços</a></div></div>
+<section class="hero" id="inicio"><svg class="linhas" style="left:-80px;top:0;width:620px;height:100%" viewBox="0 0 600 500" preserveAspectRatio="none" aria-hidden="true"><path d="M-20 420C120 330 220 470 380 360S560 200 640 250"/><path d="M-20 460C130 380 240 500 400 410S570 250 640 300"/></svg><div class="wrap"><div><p class="eyebrow">Contabilidade&nbsp;· Perícias trabalhistas&nbsp;· Perícias contábeis</p><h1>Contabilidade e perícias com <em>precisão técnica</em> e explicações claras.</h1><p class="sub">Sou Flávia Balbo, contadora e perita contábil. Atendo empresas e profissionais na contabilidade e elaboro laudos periciais contábeis e trabalhistas.</p><div class="acoes"><a class="pilula zap-link" href="#">Entrar em contato</a><a class="pilula contorno" href="#servicos">Ver serviços</a></div></div>
 <div class="pose"><div class="foto" role="img" aria-label="Flávia Balbo"></div><div class="cartao"><b>Flávia Balbo</b><span>Contadora e perita contábil</span></div></div></div></section>
 <div class="faixa"><div class="wrap"><div class="fx"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.7.6 1 1.2 1 2.1h5c0-.9.3-1.5 1-2.1A6 6 0 0 0 12 3z"/></svg><b>Clareza</b><span>Cada número explicado</span></div><div class="fx"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14M8 20V9l4-5 4 5v11M10.5 13h3M10.5 16h3"/></svg><b>Técnica</b><span>Normas do CFC e método descrito</span></div><div class="fx"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg><b>Sigilo</b><span>Documentos tratados conforme a LGPD</span></div><div class="fx"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9.5 2.5h5"/></svg><b>Prazos</b><span>Obrigações acompanhadas de perto</span></div></div></div>
 <section class="familiar"><div class="wrap"><div><h2>Quando me procurar</h2><ul><li>Dúvida se o enquadramento tributário da empresa é o mais adequado.</li>
