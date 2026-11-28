@@ -11,13 +11,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <script>(function(d){d.classList.add("js");function ok(){d.classList.add("pronto")}setTimeout(ok,900);document.addEventListener("DOMContentLoaded",function(){if(document.fonts&&document.fonts.ready){document.fonts.ready.then(ok)}else{ok()}})})(document.documentElement)</script>
 <style>
-:root{--marinho:#0D1B2A;--grafite:#2C3440;--nude:#D6C2B6;--nude-claro:#EBE0D7;--offwhite:#F7F3EF;--rose:#CDA18A;--rose-escuro:#B7826B;--metal:linear-gradient(120deg,#E6C2AE 0%,#CDA18A 45%,#B7826B 100%);--suave:#5b6574;--serif:'Playfair Display',Georgia,serif;--sans:'Montserrat',system-ui,sans-serif;--sai:cubic-bezier(.16,1,.3,1)}
+:root{--marinho:#0D1B2A;--grafite:#2C3440;--nude:#D6C2B6;--nude-claro:#EBE0D7;--offwhite:#F7F3EF;--rose:#CDA18A;--rose-escuro:#B7826B;--rose-texto:#8E5B46;--metal:linear-gradient(120deg,#E6C2AE 0%,#CDA18A 45%,#B7826B 100%);--suave:#5b6574;--serif:'Playfair Display',Georgia,serif;--sans:'Montserrat',system-ui,sans-serif;--sai:cubic-bezier(.16,1,.3,1)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{background:var(--offwhite);color:var(--marinho);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--rose-escuro);outline-offset:3px}
+::selection{background:rgba(205,161,138,.35);color:var(--marinho)}
+input,textarea{caret-color:var(--rose)}
 .wrap{width:min(1060px,100% - 40px);margin-inline:auto}
 h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.18}
 h2{font-size:clamp(1.7rem,3.4vw,2.4rem)}
@@ -26,8 +28,8 @@ em{font-style:italic}
 .pilula:hover{box-shadow:0 8px 22px rgba(13,27,42,.22)}
 .pilula.metal{background:var(--metal);color:var(--marinho);font-weight:600}
 .pilula.contorno{background:transparent;color:inherit;border:1px solid currentColor}
-.eyebrow{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grafite);margin-bottom:22px;font-weight:500}
-.falta{border-bottom:1px dotted var(--rose-escuro)}
+.eyebrow{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grafite);margin-bottom:22px;font-weight:500}
+.falta{border-bottom:1px dotted var(--rose-texto)}
 .marca{display:flex;align-items:center;gap:12px}
 .marca img{height:44px;width:auto}
 .marca .nome b{display:block;font-family:var(--serif);font-weight:400;font-size:1.2rem;letter-spacing:.13em;text-transform:uppercase;line-height:1.1}
@@ -37,9 +39,9 @@ em{font-style:italic}
 .linhas{position:absolute;pointer-events:none}
 .linhas path{fill:none;stroke:var(--rose);stroke-width:1.2;opacity:.6;vector-effect:non-scaling-stroke}
 .faq details{border-bottom:1px solid rgba(13,27,42,.16)}
-.faq summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;gap:20px;font-family:var(--serif);font-size:1.15rem}
+.faq summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:var(--serif);font-size:1.15rem}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font-family:var(--sans);font-size:1.4rem;line-height:1;color:var(--rose-escuro)}
+.faq summary::after{content:"+";font-family:var(--sans);font-size:1.4rem;line-height:1;color:var(--rose-texto)}
 .faq details[open] summary::after{content:"\2212"}
 .faq details p{padding:0 40px 24px 0;color:var(--suave);font-size:.92rem}
 .zap{position:fixed;right:18px;bottom:18px;z-index:30;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--metal);color:var(--marinho);box-shadow:0 6px 20px rgba(0,0,0,.35)}
@@ -47,17 +49,17 @@ em{font-style:italic}
 .rodape-centro{background:var(--marinho);color:#9ea9ba;font-size:.74rem;padding:0 0 40px}
 .rodape-centro .wrap{border-top:1px solid rgba(205,161,138,.3);padding-top:36px;display:grid;justify-items:center;gap:22px;text-align:center}
 .rodape-centro .marca .nome b{color:var(--offwhite)}
-.rodape-centro .tag{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:#c4cddb}
+.rodape-centro .tag{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#c4cddb}
 .rodape-centro a:hover{color:#fff}
 
 .topo{position:sticky;top:0;z-index:20;background:rgba(247,243,239,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(13,27,42,.08)}
 .topo .wrap{display:flex;justify-content:space-between;align-items:center;height:72px}
 .topo nav{display:none;gap:28px;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
 .topo nav a:hover{color:var(--rose-escuro)}
-.topo .pilula{display:none;padding:11px 22px;font-size:.62rem}
+.topo .pilula{display:none;padding:12px 22px;font-size:.7rem}
 .hero{position:relative;padding:40px 0 70px;overflow:hidden}
 .hero .wrap{display:grid;gap:44px}
-.hero .eyebrow{color:var(--rose-escuro)}
+.hero .eyebrow{color:var(--rose-texto);letter-spacing:.12em;text-wrap:balance}
 .hero h1{font-size:clamp(2.2rem,8vw,4rem);margin-bottom:20px}
 .hero h1 em{background:var(--metal);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.1em}
 .hero .sub{color:var(--suave);max-width:46ch;margin-bottom:30px}
@@ -68,13 +70,13 @@ em{font-style:italic}
 .pose .foto{position:relative;aspect-ratio:4/5;border-radius:999px 999px 24px 24px;background:url(img/hero.jpg) center 12%/cover;margin-left:26px;box-shadow:0 20px 44px rgba(13,27,42,.3)}
 .cartao{position:absolute;left:0;bottom:70px;background:var(--offwhite);border-radius:16px;padding:12px 16px;box-shadow:0 10px 28px rgba(13,27,42,.22);font-size:.7rem;line-height:1.4;z-index:2}
 .cartao b{display:block;font-family:var(--serif);font-weight:400;font-size:.95rem}
-.cartao span{color:var(--rose-escuro);letter-spacing:.1em;text-transform:uppercase;font-size:.58rem;font-weight:600}
+.cartao span{color:var(--rose-texto);letter-spacing:.1em;text-transform:uppercase;font-size:.68rem;font-weight:600}
 .faixa{background:var(--marinho);color:var(--offwhite);padding:34px 0}
-.faixa .wrap{display:grid;grid-template-columns:1fr 1fr;gap:26px 18px}
+.faixa .wrap{display:grid;grid-template-columns:1fr 1fr;gap:26px 18px;align-items:start}
 .fx{display:grid;gap:4px;justify-items:center;text-align:center}
 .fx .ico{width:34px;height:34px;stroke:var(--rose)}
 .fx b{font-family:var(--serif);font-weight:400;font-size:1.05rem;margin-top:4px}
-.fx span{font-size:.74rem;color:#aeb8c8;max-width:22ch;line-height:1.5}
+.fx span{font-size:.8rem;color:#aeb8c8;max-width:22ch;line-height:1.5}
 section{position:relative}
 .familiar{padding:84px 0}
 .familiar .wrap{display:grid;gap:30px}
@@ -91,10 +93,10 @@ section{position:relative}
 .sv[open]{background:var(--marinho);color:var(--offwhite)}
 .sv summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;padding:22px 24px}
 .sv summary::-webkit-details-marker{display:none}
-.sv summary::after{content:"+";margin-left:auto;font-size:1.5rem;color:var(--rose-escuro)}
+.sv summary::after{content:"+";margin-left:auto;font-size:1.5rem;color:var(--rose-texto)}
 .sv[open] summary::after{content:"\2212";color:var(--rose)}
 .sv .ico{width:38px;height:38px;flex:none}.sv[open] .ico{stroke:var(--rose)}
-.sv h3{font-size:1.2rem}.sv small{font-size:.72rem;color:var(--suave)}.sv[open] small{color:#aeb8c8}
+.sv h3{font-size:1.2rem}.sv small{font-size:.78rem;color:var(--suave)}.sv[open] small{color:#aeb8c8}
 .sv p{padding:0 24px 12px;font-size:.92rem;color:#d6dce6}
 .sv .mais{display:inline-block;margin:0 24px 24px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--rose);border-bottom:1px solid var(--rose);padding-bottom:3px}
 .sobre{padding:84px 0}
@@ -114,8 +116,9 @@ section{position:relative}
 .depo-item blockquote p{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2.6vw,1.5rem);line-height:1.6}
 .depo-item figcaption{margin-top:20px;font-size:.8rem}.depo-item figcaption b{display:block}.depo-item figcaption span{color:var(--suave)}
 .ctrl{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:26px}
-.ctrl button{width:42px;height:42px;border-radius:50%;border:1px solid var(--marinho);background:none;cursor:pointer;font-size:1rem;color:var(--marinho)}
-#pontos{display:flex;gap:8px}#pontos button{width:8px;height:8px;border-radius:50%;border:0;background:rgba(13,27,42,.2)}#pontos button.ativo{background:var(--rose-escuro)}
+.ctrl button{width:44px;height:44px;border-radius:50%;border:1px solid var(--marinho);background:none;cursor:pointer;font-size:1rem;color:var(--marinho);transition:background-color .2s,color .2s}
+.ctrl button:hover{background:var(--marinho);color:var(--offwhite)}
+#pontos{display:flex;gap:0}#pontos button{width:24px;height:24px;padding:8px;border-radius:50%;border:0;background:rgba(13,27,42,.2);background-clip:content-box;cursor:pointer;transition:background-color .2s}#pontos button:hover{background-color:rgba(13,27,42,.45)}#pontos button.ativo{background-color:var(--rose-escuro)}
 .faqsec{background:var(--nude-claro);padding:84px 0}.faqsec h2{text-align:center;margin-bottom:34px}.faqsec .faq{max-width:760px;margin:auto}
 .contato{background:var(--marinho);color:var(--offwhite);padding:84px 0;overflow:hidden}
 .contato .wrap{display:grid;gap:36px;position:relative}
@@ -144,8 +147,8 @@ section{position:relative}
 .pose .foto{border-radius:6px 6px 6px 6px;aspect-ratio:4/5}
 .cartao{border-radius:4px}
 .linhas{display:none}
-.familiar li{border-radius:4px;box-shadow:none;border:1px solid rgba(13,27,42,.1);border-left:3px solid var(--rose)}
-.familiar li::before{display:none}.familiar li{padding-left:18px}
+.familiar li{border-radius:4px;box-shadow:none;border:1px solid rgba(13,27,42,.1);padding-left:46px}
+.familiar li::before{width:16px;height:1px;border-radius:0;top:28px;left:18px;background:var(--rose-escuro)}
 .citacao{font-style:normal;font-size:1.15rem}
 .sv{border-radius:6px}
 .sobre .foto{border-radius:6px}
@@ -255,10 +258,10 @@ section{position:relative}
 <li>Obrigações e prazos fiscais que exigem acompanhamento constante.</li>
 <li>Relatórios contábeis entregues sem explicação do que mostram.</li>
 <li>Processo judicial que exige cálculo ou laudo técnico fundamentado.</li></ul><a class="pilula metal zap-link" href="#">Falar pelo WhatsApp</a></div><p class="citacao">Cada entrega vem acompanhada da explicação do que os números significam para as decisões da sua empresa ou do seu processo.</p></div></section>
-<section class="servs" id="servicos"><div class="wrap"><div><p class="eyebrow">Serviços</p><h2>Como posso ajudar</h2><p class="intro">Três áreas de atuação. Selecione uma para ver o que está incluído.</p></div><div><details class="sv" open><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><rect x="8" y="5.5" width="8" height="3.5"/><path d="M8.5 13h.01M12 13h.01M15.5 13h.01M8.5 16h.01M12 16h.01M15.5 16h.01M8.5 19h.01M12 19h.01M15.5 19h.01"/></svg><span><h3>Contabilidade</h3><small>Para empresas e profissionais</small></span></summary><p>Escrituração, impostos e relatórios mensais, com orientação sobre o que fazer com os números.</p><a class="mais zap-link" href="#">Solicitar proposta</a></details>
+<section class="servs" id="servicos"><div class="wrap"><div><h2>Como posso ajudar</h2><p class="intro">Três áreas de atuação. Selecione uma para ver o que está incluído.</p></div><div><details class="sv" open><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><rect x="8" y="5.5" width="8" height="3.5"/><path d="M8.5 13h.01M12 13h.01M15.5 13h.01M8.5 16h.01M12 16h.01M15.5 16h.01M8.5 19h.01M12 19h.01M15.5 19h.01"/></svg><span><h3>Contabilidade</h3><small>Para empresas e profissionais</small></span></summary><p>Escrituração, impostos e relatórios mensais, com orientação sobre o que fazer com os números.</p><a class="mais zap-link" href="#">Solicitar proposta</a></details>
 <details class="sv"><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M7 21h10M5 6h14"/><path d="M5 6l-2.6 6.5a3 3 0 0 0 5.2 0zM19 6l-2.6 6.5a3 3 0 0 0 5.2 0z"/></svg><span><h3>Perícias trabalhistas</h3><small>Cálculos e laudos</small></span></summary><p>Horas extras, FGTS e verbas rescisórias em processos trabalhistas, com cálculos conferidos e detalhados.</p><a class="mais zap-link" href="#">Solicitar proposta</a></details>
 <details class="sv"><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h4"/><path d="M14 3l5 5v2M14 3v5h5M8 9h3M8 13h2"/><circle cx="16" cy="16" r="3"/><path d="M18.2 18.2 21 21"/></svg><span><h3>Perícias contábeis</h3><small>Processos judiciais e extrajudiciais</small></span></summary><p>Análise de documentos e registros contábeis, com um laudo que mostra como se chegou a cada valor.</p><a class="mais zap-link" href="#">Solicitar proposta</a></details></div></div></section>
-<section class="sobre" id="sobre"><div class="wrap"><div class="foto" role="img" aria-label="Mesa de trabalho com notebook, planilhas, calculadora e caderno com a marca Flávia Balbo"></div><div><p class="eyebrow">Contadora e perita contábil</p><h2>Sobre a Flávia</h2><p>Contadora e perita contábil, com registro no CRC/SP <span class="falta">[nº]</span> e <span class="falta">[X anos]</span> de atuação. Atendo <span class="falta">[empresas, profissionais liberais e advogados]</span>.</p><p>Na contabilidade, os relatórios seguem as normas do CFC e vêm com a explicação do que cada número significa. Nas perícias, o laudo descreve o método e a fonte de cada cálculo.</p><a class="pilula zap-link" href="#">Entrar em contato</a></div></div></section>
+<section class="sobre" id="sobre"><div class="wrap"><div class="foto" role="img" aria-label="Mesa de trabalho com notebook, planilhas, calculadora e caderno com a marca Flávia Balbo"></div><div><h2>Sobre a Flávia</h2><p>Contadora e perita contábil, com registro no CRC/SP <span class="falta">[nº]</span> e <span class="falta">[X anos]</span> de atuação. Atendo <span class="falta">[empresas, profissionais liberais e advogados]</span>.</p><p>Na contabilidade, os relatórios seguem as normas do CFC e vêm com a explicação do que cada número significa. Nas perícias, o laudo descreve o método e a fonte de cada cálculo.</p><a class="pilula zap-link" href="#">Entrar em contato</a></div></div></section>
 <section class="como"><div class="wrap"><h2>Como funciona</h2><ol class="passos">
 <li><h3>Contato inicial</h3><p>Você descreve a demanda e eu avalio o escopo do trabalho.</p></li>
 <li><h3>Proposta</h3><p>Envio o escopo, o prazo e o valor para sua aprovação.</p></li>
@@ -290,7 +293,7 @@ if(form){form.addEventListener("submit",function(e){e.preventDefault();var f=e.t
 var car=document.getElementById("carrossel");
 if(car){var itens=car.querySelectorAll(".depo-item"),i=0,pontos=document.getElementById("pontos");
  itens.forEach(function(_,n){var b=document.createElement("button");b.type="button";b.setAttribute("aria-label","Depoimento "+(n+1));b.addEventListener("click",function(){ir(n);});pontos.appendChild(b);});
- function ir(n){i=(n+itens.length)%itens.length;itens.forEach(function(el,k){el.classList.toggle("ativo",k===i);});[].forEach.call(pontos.children,function(b,k){b.classList.toggle("ativo",k===i);});}
+ function ir(n){i=(n+itens.length)%itens.length;itens.forEach(function(el,k){el.classList.toggle("ativo",k===i);});[].forEach.call(pontos.children,function(b,k){b.classList.toggle("ativo",k===i);if(k===i){b.setAttribute("aria-current","true")}else{b.removeAttribute("aria-current")}});}
  document.querySelectorAll("[data-dir]").forEach(function(b){b.addEventListener("click",function(){ir(i+Number(b.dataset.dir));});});
  ir(0);}
 
